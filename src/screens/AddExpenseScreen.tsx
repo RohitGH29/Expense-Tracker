@@ -1,9 +1,26 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, StyleSheet, TextInput, TouchableOpacity, ActivityIndicator, CheckBox } from 'react-native';
+import { View, Text, StyleSheet, TextInput, TouchableOpacity, ActivityIndicator, Switch } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { RouteProp } from '@react-navigation/native';
+import { StackNavigationProp } from '@react-navigation/stack';
 
-const AddExpenseScreen = ({ route, navigation }) => {
-  const { category, setExpenses } = route.params;
+type AddExpenseScreenNavigationProp = StackNavigationProp<any, 'AddExpense'>;
+type AddExpenseScreenRouteProp = RouteProp<any, 'AddExpense'>;
+
+// Define the params type
+interface RouteParams {
+  category: string;
+  setExpenses: React.Dispatch<React.SetStateAction<any>>;
+}
+
+interface Props {
+  navigation: AddExpenseScreenNavigationProp;
+  route: AddExpenseScreenRouteProp;
+}
+
+const AddExpenseScreen: React.FC<Props> = ({ route, navigation }) => {
+  // Explicitly type the route.params
+  const { category, setExpenses } = route.params as RouteParams; // Casting to RouteParams
   const [amount, setAmount] = useState('');
   const [description, setDescription] = useState('');
   const [date, setDate] = useState('');
@@ -64,12 +81,14 @@ const AddExpenseScreen = ({ route, navigation }) => {
         value={time}
         onChangeText={setTime}
       />
-      
-      <CheckBox
-        title="Pick Current Date & Time"
-        checked={isCurrentDateTime}
-        onPress={() => setIsCurrentDateTime(!isCurrentDateTime)}
-      />
+
+      <View style={styles.switchContainer}>
+        <Text>Pick Current Date & Time</Text>
+        <Switch
+          value={isCurrentDateTime}
+          onValueChange={(value) => setIsCurrentDateTime(value)}
+        />
+      </View>
 
       <TouchableOpacity style={styles.saveButton} onPress={saveExpense} disabled={isLoading}>
         {isLoading ? (
@@ -88,6 +107,7 @@ const styles = StyleSheet.create({
   input: { borderColor: '#ddd', borderWidth: 1, padding: 10, marginBottom: 15, borderRadius: 8 },
   saveButton: { backgroundColor: '#007bff', padding: 15, borderRadius: 8 },
   saveButtonText: { color: '#fff', fontSize: 18, textAlign: 'center' },
+  switchContainer: { flexDirection: 'row', alignItems: 'center', marginVertical: 10 },
 });
 
 export default AddExpenseScreen;
