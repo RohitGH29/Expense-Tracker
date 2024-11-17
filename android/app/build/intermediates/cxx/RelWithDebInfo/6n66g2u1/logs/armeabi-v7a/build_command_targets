@@ -1,0 +1,6 @@
+/home/codespace/android-sdk/cmake/3.22.1/bin/ninja \
+  -C \
+  /workspaces/Expense-Tracker/android/app/.cxx/RelWithDebInfo/6n66g2u1/armeabi-v7a \
+  appmodules \
+  react_codegen_rnscreens \
+  react_codegen_safeareacontext

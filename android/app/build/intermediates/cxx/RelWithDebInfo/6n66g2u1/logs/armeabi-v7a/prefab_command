@@ -1,0 +1,22 @@
+/usr/local/sdkman/candidates/java/21.0.4-ms/bin/java \
+  --class-path \
+  /home/codespace/.gradle/caches/modules-2/files-2.1/com.google.prefab/cli/2.1.0/aa32fec809c44fa531f01dcfb739b5b3304d3050/cli-2.1.0-all.jar \
+  com.google.prefab.cli.AppKt \
+  --build-system \
+  cmake \
+  --platform \
+  android \
+  --abi \
+  armeabi-v7a \
+  --os-version \
+  24 \
+  --stl \
+  c++_shared \
+  --ndk-version \
+  26 \
+  --output \
+  /tmp/agp-prefab-staging15068306347974088083/staged-cli-output \
+  /home/codespace/.gradle/caches/8.10.2/transforms/4e48b26672650dbc57d3c5ce4bd0dcf6/transformed/react-android-0.76.2-release/prefab \
+  /workspaces/Expense-Tracker/android/app/build/intermediates/cxx/refs/react-native-reanimated/36s1h1d3 \
+  /home/codespace/.gradle/caches/8.10.2/transforms/4d3b5360b77892d5e3a09d4b50d61c7e/transformed/hermes-android-0.76.2-release/prefab \
+  /home/codespace/.gradle/caches/8.10.2/transforms/8b60b4f75564ac53567672df7a1c9a73/transformed/fbjni-0.6.0/prefab

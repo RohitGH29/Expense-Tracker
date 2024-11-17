@@ -1,0 +1,41 @@
+{
+  "installationFolder": "/workspaces/Expense-Tracker/node_modules/react-native-reanimated/android/build/intermediates/prefab_package/release/prefab",
+  "gradlePath": ":react-native-reanimated",
+  "packageInfo": {
+    "packageName": "react-native-reanimated",
+    "packageSchemaVersion": 2,
+    "packageDependencies": [],
+    "modules": [
+      {
+        "moduleName": "reanimated",
+        "moduleHeaders": "/workspaces/Expense-Tracker/node_modules/react-native-reanimated/android/build/prefab-headers/reanimated",
+        "moduleExportLibraries": [],
+        "abis": [
+          {
+            "abiName": "x86_64",
+            "abiApi": 24,
+            "abiNdkMajor": 26,
+            "abiStl": "c++_shared",
+            "abiLibrary": "/workspaces/Expense-Tracker/node_modules/react-native-reanimated/android/build/intermediates/cxx/RelWithDebInfo/3l6h5a1q/obj/x86_64/libreanimated.so",
+            "abiAndroidGradleBuildJsonFile": "/workspaces/Expense-Tracker/node_modules/react-native-reanimated/android/.cxx/RelWithDebInfo/3l6h5a1q/x86_64/android_gradle_build.json"
+          }
+        ]
+      },
+      {
+        "moduleName": "worklets",
+        "moduleHeaders": "/workspaces/Expense-Tracker/node_modules/react-native-reanimated/android/build/prefab-headers/worklets",
+        "moduleExportLibraries": [],
+        "abis": [
+          {
+            "abiName": "x86_64",
+            "abiApi": 24,
+            "abiNdkMajor": 26,
+            "abiStl": "c++_shared",
+            "abiLibrary": "/workspaces/Expense-Tracker/node_modules/react-native-reanimated/android/build/intermediates/cxx/RelWithDebInfo/3l6h5a1q/obj/x86_64/libworklets.so",
+            "abiAndroidGradleBuildJsonFile": "/workspaces/Expense-Tracker/node_modules/react-native-reanimated/android/.cxx/RelWithDebInfo/3l6h5a1q/x86_64/android_gradle_build.json"
+          }
+        ]
+      }
+    ]
+  }
+}
